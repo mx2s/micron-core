@@ -1,3 +1,4 @@
+using System;
 using BaseFramework.DL.Middleware;
 using BaseFramework.DL.Module.Http;
 using Nancy;
@@ -20,6 +21,10 @@ namespace BaseFramework.DL.Module.Controller {
                 
                 return null;
             };
+        }
+
+        protected Enum GetEnumFromRequest(string parameter, Type enumType) {
+            return (Enum) Enum.Parse(enumType, Request.Query["service_type"], true);
         }
     }
 }

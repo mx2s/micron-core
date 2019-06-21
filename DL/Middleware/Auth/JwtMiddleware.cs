@@ -1,7 +1,6 @@
 using BaseFramework.DL.Module.Http;
 using BaseFramework.DL.Repository.User;
 using Core.DL.Module.Auth;
-using Core.DL.Module.Http;
 using Nancy;
 
 namespace BaseFramework.DL.Middleware.Auth {

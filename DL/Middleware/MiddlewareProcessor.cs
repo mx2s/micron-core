@@ -1,5 +1,4 @@
 using BaseFramework.DL.Module.Http;
-using Core.DL.Module.Http;
 
 namespace BaseFramework.DL.Middleware {
     public static class MiddlewareProcessor {
