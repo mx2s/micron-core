@@ -4,7 +4,7 @@ using Core.DL.Module.Config;
 using JWT.Algorithms;
 using JWT.Builder;
 
-namespace Core.DL.Module.Auth {
+namespace BaseFramework.DL.Module.Auth {
     public static class Jwt {
         public static string FromUserId(int userId) {
             var days = AppConfig.Get().GetJwtLifeDays();
