@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Core.DL.Module.Http;
+using System.Linq;
 using Core.PL.Transformer.Http;
 using Nancy;
 using Newtonsoft.Json.Linq;
@@ -41,6 +41,7 @@ namespace BaseFramework.DL.Module.Http {
             var response = (Response) new JObject() {
                 ["errors"] = new HttpErrorTransformer().TransformList(errors)
             }.ToString();
+            response.StatusCode = errors.First().StatusCode;
             return response;
         }
     }

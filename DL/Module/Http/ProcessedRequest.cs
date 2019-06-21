@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using BaseFramework.DL.Model.User;
-using Core.DL.Module.Http;
 using Nancy;
 
 namespace BaseFramework.DL.Module.Http {

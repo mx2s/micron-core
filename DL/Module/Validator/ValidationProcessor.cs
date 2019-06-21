@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Core.DL.Module.Http;
+using BaseFramework.DL.Module.Http;
 using Nancy;
 
 namespace BaseFramework.DL.Module.Validator {
     public static class ValidationProcessor {
-        public static List<HttpError> Process(Request request, IValidatorRule[] rules) {
+        public static List<HttpError> Process(Request request, IEnumerable<IValidatorRule> rules) {
             var list = new List<HttpError>();
             
             foreach (var rule in rules) {

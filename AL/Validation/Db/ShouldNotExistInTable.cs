@@ -6,12 +6,12 @@ using Nancy;
 using Newtonsoft.Json.Linq;
 
 namespace BaseFramework.AL.Validation.Db {
-    public class ExistsInTable : IValidatorRule {
+    public class ShouldNotExistInTable : IValidatorRule {
         public string Parameter { get; }
 
         public JObject Custom { get; }
 
-        public ExistsInTable(string parameter, string table, string column = null) {
+        public ShouldNotExistInTable(string parameter, string table, string column = null) {
             column = column ?? parameter;
             Parameter = parameter;
             Custom = new JObject() {
@@ -23,7 +23,7 @@ namespace BaseFramework.AL.Validation.Db {
         public HttpError Process(Request request) {
             var val = (string) request.Query[Parameter];
 
-            var result = DbConnection.Connection().ExecuteScalar<bool>(
+            var result = !DbConnection.Connection().ExecuteScalar<bool>(
                 $"SELECT COUNT(*) FROM {Custom["table"]} WHERE {Custom["column"]} = @val LIMIT 1",
                 new {
                     val
@@ -32,8 +32,9 @@ namespace BaseFramework.AL.Validation.Db {
 
             if (!result) {
                 return new HttpError(
-                    HttpStatusCode.NotFound,
-                    $"Entity with specified {Custom["column"]} doesn't exist in table {Custom["table"]}", Parameter
+                    HttpStatusCode.UnprocessableEntity,
+                    $"Entity with specified {Custom["column"]} already exist in table {Custom["table"]}", 
+                    Parameter
                 );
             }
 

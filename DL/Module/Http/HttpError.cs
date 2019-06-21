@@ -1,6 +1,6 @@
 using Nancy;
 
-namespace Core.DL.Module.Http {
+namespace BaseFramework.DL.Module.Http {
     public class HttpError {
         public HttpStatusCode StatusCode { get; }
 
