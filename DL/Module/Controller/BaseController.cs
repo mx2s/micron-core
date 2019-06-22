@@ -23,8 +23,12 @@ namespace BaseFramework.DL.Module.Controller {
             };
         }
 
+        protected string GetStringFromRequest(string parameter) => (string) Request.Query[parameter];
+        
+        protected int GetIntFromRequest(string parameter) => (int) Request.Query[parameter];
+        
         protected Enum GetEnumFromRequest(string parameter, Type enumType) {
-            return (Enum) Enum.Parse(enumType, Request.Query["service_type"], true);
+            return (Enum) Enum.Parse(enumType, Request.Query[parameter], true);
         }
     }
 }
