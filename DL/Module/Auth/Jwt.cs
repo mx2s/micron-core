@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Core.DL.Module.Config;
+using BaseFramework.DL.Module.Config;
 using JWT.Algorithms;
 using JWT.Builder;
 

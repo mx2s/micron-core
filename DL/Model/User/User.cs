@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using Core.DL.Module.Crypto;
+using BaseFramework.DL.Module.Crypto;
 using Dapper;
 
 // ReSharper disable InconsistentNaming

@@ -1,6 +1,6 @@
 using System.Data;
 using System.Linq;
-using Core.DL.Module.Db;
+using BaseFramework.DL.Module.Db;
 using Dapper;
 
 namespace BaseFramework.DL.Model {

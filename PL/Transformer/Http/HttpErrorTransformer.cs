@@ -1,8 +1,7 @@
 using BaseFramework.DL.Module.Http;
-using BaseFramework.PL.Transformer;
 using Newtonsoft.Json.Linq;
 
-namespace Core.PL.Transformer.Http {
+namespace BaseFramework.PL.Transformer.Http {
     public class HttpErrorTransformer : BaseTransformer {
         public override JObject Transform(object obj) {
             var error = (HttpError) obj;
