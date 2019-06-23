@@ -27,7 +27,7 @@ namespace BaseFramework.DL.Module.Http {
 
         public static Response Error(HttpStatusCode code, string message) {
             var response = (Response) new JObject() {
-                ["errors"] = new HttpErrorTransformer().TransformList(
+                ["errors"] = new HttpErrorTransformer().Many(
                     new[] {new HttpError(code, message)}
                 )
             }.ToString();
@@ -39,7 +39,7 @@ namespace BaseFramework.DL.Module.Http {
         
         public static Response Errors(IEnumerable<HttpError> errors) {
             var response = (Response) new JObject() {
-                ["errors"] = new HttpErrorTransformer().TransformList(errors)
+                ["errors"] = new HttpErrorTransformer().Many(errors)
             }.ToString();
             response.StatusCode = errors.First().StatusCode;
             return response;
