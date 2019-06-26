@@ -25,6 +25,17 @@ namespace BaseFramework.DL.Module.Http {
             return response;
         }
 
+        public static Response Item(string key, JArray data,
+            HttpStatusCode statusCode = HttpStatusCode.OK) {
+            var response = (Response) new JObject() {
+                ["data"] = new JObject() {
+                    [key] = data
+                }
+            }.ToString();
+            response.StatusCode = statusCode;
+            return response;
+        }
+
         public static Response Error(HttpStatusCode code, string message) {
             var response = (Response) new JObject() {
                 ["errors"] = new HttpErrorTransformer().Many(
