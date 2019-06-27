@@ -11,7 +11,7 @@ namespace BaseFramework.DL.Middleware.Auth {
             var user = UserRepository.Find(userId);
 
             if (user != null) {
-                request.User = user;
+                request.UserId = user.id;
             }
             else {
                 request.AddError(
