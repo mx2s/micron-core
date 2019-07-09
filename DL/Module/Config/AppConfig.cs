@@ -18,7 +18,7 @@ namespace BaseFramework.DL.Module.Config {
 
         private AppConfig() {
             var config = new ConfigurationBuilder()
-                .AddJsonFile("config.json")
+                .AddJsonFile("config/config.json")
                 .Build();
             _jwtSecretKey = config["auth:jwt:secret_key"];
             _jwtTokenLifeDays = Convert.ToInt32(config["auth:jwt:token_life_days"]);
