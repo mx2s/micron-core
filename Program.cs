@@ -1,4 +1,6 @@
 ﻿using System;
+using BaseFramework.AL.Config.CLI;
+using BaseFramework.DL.Module.CLI;
 using Nancy.Configuration;
 using Nancy.Hosting.Self;
 
@@ -19,7 +21,7 @@ namespace BaseFramework {
             Console.WriteLine("server started");
 
             Console.Write("Press enter to stop server...");
-            Console.ReadLine();
+            Cli.CliLoop(CommandsList.Get());
         }
     }
 }
