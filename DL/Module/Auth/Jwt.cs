@@ -13,7 +13,7 @@ namespace BaseFramework.DL.Module.Auth {
                 .WithSecret(AppConfig.Get().GetJwtSecretKey())
                 .AddClaim(
                     "exp",
-                    DateTimeOffset.UtcNow.AddDays(AppConfig.Get().GetJwtLifeDays()).ToUnixTimeSeconds()
+                    DateTimeOffset.UtcNow.AddDays(days).ToUnixTimeSeconds()
                 )
                 .AddClaim("user_id", userId)
                 .Build();
@@ -27,6 +27,7 @@ namespace BaseFramework.DL.Module.Auth {
                     .Decode<IDictionary<string, object>>(token)["user_id"]);
             }
             catch (Exception e) {
+                // ignored
             }
             return 0;
         }

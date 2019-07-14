@@ -40,7 +40,7 @@ namespace BaseFramework.DL.Module.Config {
         }
 
         public string GetConnectionString() 
-            => $"Host={_dbHost};Username={_dbUser};Password={_dbPassword};Database={_dbName}";
+            => $"Host={_dbHost};Port={_dbPort};Username={_dbUser};Password={_dbPassword};Database={_dbName}";
 
         public string GetJwtSecretKey() => _jwtSecretKey;
         

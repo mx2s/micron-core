@@ -15,7 +15,6 @@ namespace BaseFramework.AL.Validation.String {
         }
 
         public HttpError Process(Request request) {
-            var val = (string) request.Query[Parameter];
             var result = Enum.TryParse(EnumType, (string) request.Query[Parameter], true, out _);
             
             if (!result) {

@@ -4,8 +4,6 @@ using Nancy;
 
 namespace BaseFramework.AL.Validation.Basic {
     public class ShouldHaveParameters : IValidatorRule {
-        public string Parameter { get; }
-
         private string[] Parameters { get; }
 
         public ShouldHaveParameters(string[] parameters) {

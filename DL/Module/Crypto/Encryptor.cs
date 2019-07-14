@@ -7,10 +7,6 @@ using BaseFramework.DL.Module.Config;
 // Used example from: https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
 namespace BaseFramework.DL.Module.Crypto {
     public static class Encryptor {
-        private const int Keysize = 256;
-
-        private const int DerivationIterations = 1000;
-
         public static string Encrypt(string text, string key = null) {
             if (text.Length == 0) {
                 return null;
