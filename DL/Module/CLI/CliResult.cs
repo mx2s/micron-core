@@ -18,6 +18,11 @@ namespace BaseFramework.DL.Module.CLI {
                 Console.WriteLine(item);
             }
             Console.WriteLine("\nExited with code: " + ExitCode);
+            Console.WriteLine('\n');
+            for (var i = 0; i <= 30; i++) {
+                Console.Write('*');
+            }
+            Console.WriteLine('\n');
         }
     }
 }

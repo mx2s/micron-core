@@ -3,5 +3,7 @@ namespace BaseFramework.DL.Module.CLI {
         Ok = 0,
         
         UnknownError = 1,
+        NotFound = 2,
+        Aborted = 3
     }
 }
