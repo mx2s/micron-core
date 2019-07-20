@@ -7,5 +7,7 @@ namespace BaseFramework.DL.Module.Misc {
         public static int IntRange(int min, int max) => new Random().Next(min, max);
         
         public static decimal SmallDecimal() => 0.0001M * new Random().Next(UInt16.MaxValue);
+
+        public static string RandomString() => Guid.NewGuid().ToString().Replace("-", "");
     }
 }
