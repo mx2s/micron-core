@@ -16,20 +16,22 @@ namespace BaseFramework.DL.Module.Config {
         
         private static AppConfig _instance;
 
+        private readonly IConfigurationRoot _configData;
+
         private AppConfig() {
-            var config = new ConfigurationBuilder()
+            _configData = new ConfigurationBuilder()
                 .AddJsonFile("config/config.json")
                 .Build();
-            _jwtSecretKey = config["auth:jwt:secret_key"];
-            _jwtTokenLifeDays = Convert.ToInt32(config["auth:jwt:token_life_days"]);
+            _jwtSecretKey = _configData["auth:jwt:secret_key"];
+            _jwtTokenLifeDays = Convert.ToInt32(_configData["auth:jwt:token_life_days"]);
 
-            _encryptionKey = config["auth:encryption_key"];
+            _encryptionKey = _configData["auth:encryption_key"];
             
-            _dbName = config["database:name"];
-            _dbHost = config["database:host"];
-            _dbPort = Convert.ToInt32(config["database:port"]);
-            _dbUser = config["database:user"];
-            _dbPassword = config["database:password"];
+            _dbName = _configData["database:name"]; 
+            _dbHost = _configData["database:host"];
+            _dbPort = Convert.ToInt32(_configData["database:port"]);
+            _dbUser = _configData["database:user"];
+            _dbPassword = _configData["database:password"];
         }
 
         public static AppConfig Get() {
@@ -38,6 +40,8 @@ namespace BaseFramework.DL.Module.Config {
             }
             return _instance;
         }
+        
+        public static string GetConfiguration(string key) => Get()._configData[key];
 
         public string GetConnectionString() 
             => $"Host={_dbHost};Port={_dbPort};Username={_dbUser};Password={_dbPassword};Database={_dbName}";
