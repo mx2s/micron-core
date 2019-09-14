@@ -16,6 +16,7 @@ namespace BaseFramework {
         static void Main() {
             var host = new NancyHost(new Bootstrapper(), new Uri("http://localhost:8000"));
 
+            Console.WriteLine("Version:" + AppInfo.Version);
             Console.WriteLine("starting server from BaseProject in DEBUG mode");
             host.Start();
             Console.WriteLine("server started");
