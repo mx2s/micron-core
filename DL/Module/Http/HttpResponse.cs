@@ -36,12 +36,17 @@ namespace BaseFramework.DL.Module.Http {
             return response;
         }
 
-        public static Response Error(HttpStatusCode code, string message) {
-            var response = (Response) new JObject() {
+        public static Response Error(HttpStatusCode code, string message, JObject metadata = null) {
+            var jobj = new JObject() {
                 ["errors"] = new HttpErrorTransformer().Many(
                     new[] {new HttpError(code, message)}
                 )
-            }.ToString();
+            };
+            if (metadata != null) {
+                jobj["metadata"] = metadata;
+            }
+            
+            var response = (Response) jobj.ToString();
             response.StatusCode = code;
             return response;
         }
