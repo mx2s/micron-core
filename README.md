@@ -1,2 +1,2 @@
-# framework-base-core
-core of [base framework](https://github.com/mxss/framework-base)
+## Micron core
+Core of [micron framework](https://github.com/mxss/micron)
