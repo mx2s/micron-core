@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <RootNamespace>BaseFramework</RootNamespace>
+        <RootNamespace>Micron</RootNamespace>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,6 +15,7 @@
         <Company>MXSS</Company>
         <Product>MicronCore</Product>
         <PackageLicenseUrl>https://raw.githubusercontent.com/mxss/micron-core/master/LICENSE</PackageLicenseUrl>
+        <AssemblyName>MicronCore</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
