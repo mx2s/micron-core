@@ -12,7 +12,7 @@ namespace BaseFramework.AL.CLI.Basic {
         }
         
         public CliResult Execute() {
-            StrOutput.Add("Framework version: " + AppInfo.Version);
+            StrOutput.Add("Framework version: " + new AppInfo().GetAssemblyVersion());
             return new CliResult(CliExitCode.Ok, StrOutput);
         }
     }

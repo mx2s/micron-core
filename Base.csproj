@@ -5,6 +5,16 @@
         <RootNamespace>BaseFramework</RootNamespace>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>MicronCore</PackageId>
+        <PackageVersion>0.3.0</PackageVersion>
+        <Title>Micron Core</Title>
+        <Authors>Max Kovalenko</Authors>
+        <PackageProjectUrl>https://github.com/mxss/micron-core</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/mxss/micron-core.git</RepositoryUrl>
+        <Company>MXSS</Company>
+        <Product>MicronCore</Product>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/mxss/micron-core/master/LICENSE</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>
