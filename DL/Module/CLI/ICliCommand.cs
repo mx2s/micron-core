@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BaseFramework.DL.Module.CLI {
+namespace Micron.DL.Module.CLI {
     public interface ICliCommand {
         string Signature { get; }
         

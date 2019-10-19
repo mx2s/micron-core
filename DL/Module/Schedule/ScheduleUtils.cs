@@ -1,6 +1,6 @@
 using System;
 
-namespace BaseFramework.DL.Module.Schedule {
+namespace Micron.DL.Module.Schedule {
     public static class ScheduleUtils {
         public static DateTime GetJobNextExecutionDate(ScheduledJob job) {
             return DateTime.Now;

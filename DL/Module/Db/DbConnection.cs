@@ -1,8 +1,8 @@
 using System.Data;
-using BaseFramework.DL.Module.Config;
+using Micron.DL.Module.Config;
 using Npgsql;
 
-namespace BaseFramework.DL.Module.Db {
+namespace Micron.DL.Module.Db {
     public class DbConnection {
         private readonly IDbConnection _connection;
 

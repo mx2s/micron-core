@@ -2,10 +2,10 @@
 
 using System;
 using System.Linq;
-using BaseFramework.DL.Module.Job;
 using Dapper;
+using Micron.DL.Module.Job;
 
-namespace BaseFramework.DL.Model.Schedule {
+namespace Micron.DL.Model.Schedule {
     public class LastScheduledJobDate : Model {
         public int id;
 

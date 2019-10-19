@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Module.Http;
 using Nancy;
 
-namespace BaseFramework.DL.Module.Validator {
+namespace Micron.DL.Module.Validator {
     public static class ValidationProcessor {
         public static List<HttpError> Process(
             Request request, IEnumerable<IValidatorRule> rules, bool returnFirst = false

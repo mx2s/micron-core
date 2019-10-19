@@ -1,7 +1,7 @@
-using BaseFramework.DL.Model.Schedule;
-using BaseFramework.DL.Module.Job;
+using Micron.DL.Model.Schedule;
+using Micron.DL.Module.Job;
 
-namespace BaseFramework.DL.Repository.Schedule {
+namespace Micron.DL.Repository.Schedule {
     public static class LastScheduledJobDateRepository {
         public static LastScheduledJobDate Find(int id)
             => LastScheduledJobDate.Find(id);

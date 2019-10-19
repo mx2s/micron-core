@@ -1,8 +1,8 @@
 using System;
-using BaseFramework.DL.Module.Job;
-using BaseFramework.DL.Module.Schedule.Enum;
+using Micron.DL.Module.Job;
+using Micron.DL.Module.Schedule.Enum;
 
-namespace BaseFramework.DL.Module.Schedule {
+namespace Micron.DL.Module.Schedule {
     public class ScheduledJob {
         private IJob _job;
 

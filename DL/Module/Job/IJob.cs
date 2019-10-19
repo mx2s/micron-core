@@ -1,4 +1,4 @@
-namespace BaseFramework.DL.Module.Job {
+namespace Micron.DL.Module.Job {
     public interface IJob {
         string Name { get; }
         

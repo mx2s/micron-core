@@ -1,8 +1,8 @@
-using BaseFramework.DL.Module.Http;
-using BaseFramework.DL.Module.Validator;
+using Micron.DL.Module.Http;
+using Micron.DL.Module.Validator;
 using Nancy;
 
-namespace BaseFramework.AL.Validation.Basic {
+namespace Micron.AL.Validation.Basic {
     public class ShouldHaveParameters : IValidatorRule {
         private string[] Parameters { get; }
 

@@ -1,6 +1,6 @@
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Module.Http;
 
-namespace BaseFramework.DL.Middleware {
+namespace Micron.DL.Middleware {
     public interface IMiddleware {
         ProcessedRequest Process(ProcessedRequest request);
     }

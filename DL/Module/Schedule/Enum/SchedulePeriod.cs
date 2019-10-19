@@ -1,4 +1,4 @@
-namespace BaseFramework.DL.Module.Schedule.Enum {
+namespace Micron.DL.Module.Schedule.Enum {
     public enum SchedulePeriod {
         EveryNMinutes = 1,
         EveryNHours = 2,

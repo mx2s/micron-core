@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using BaseFramework.DL.Module.CLI;
+using Micron.DL.Module.CLI;
 
-namespace BaseFramework.AL.CLI.Basic {
+namespace Micron.AL.CLI.Basic {
     public class PrintFrameworkVersion : ICliCommand {
         public string Signature { get; } = "framework-version";
         

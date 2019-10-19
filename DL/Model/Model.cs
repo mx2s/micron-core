@@ -1,9 +1,9 @@
 using System.Data;
 using System.Linq;
-using BaseFramework.DL.Module.Db;
 using Dapper;
+using Micron.DL.Module.Db;
 
-namespace BaseFramework.DL.Model {
+namespace Micron.DL.Model {
     public abstract class Model {
         protected static IDbConnection Connection() => DbConnection.Connection();
 

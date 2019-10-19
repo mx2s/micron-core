@@ -1,9 +1,9 @@
 using System.Text.RegularExpressions;
-using BaseFramework.DL.Module.Http;
-using BaseFramework.DL.Module.Validator;
+using Micron.DL.Module.Http;
+using Micron.DL.Module.Validator;
 using Nancy;
 
-namespace BaseFramework.AL.Validation.String {
+namespace Micron.AL.Validation.String {
     public class HasLetters : IValidatorRule {
         public string Parameter { get; }
         

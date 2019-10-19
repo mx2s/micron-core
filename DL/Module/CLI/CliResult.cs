@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BaseFramework.DL.Module.CLI {
+namespace Micron.DL.Module.CLI {
     public class CliResult {
         public CliExitCode ExitCode { get; }
 

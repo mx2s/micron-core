@@ -1,9 +1,9 @@
 using System;
-using BaseFramework.DL.Middleware;
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Middleware;
+using Micron.DL.Module.Http;
 using Nancy;
 
-namespace BaseFramework.DL.Module.Controller {
+namespace Micron.DL.Module.Controller {
     public abstract class BaseController : NancyModule {
         protected ProcessedRequest CurrentRequest { get; set; }
 

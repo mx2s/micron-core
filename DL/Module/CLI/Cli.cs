@@ -1,6 +1,6 @@
 using System;
 
-namespace BaseFramework.DL.Module.CLI {
+namespace Micron.DL.Module.CLI {
     public static class Cli {
         /// <summary>
         /// Starts CLI loop with specified set of commands which can be executed

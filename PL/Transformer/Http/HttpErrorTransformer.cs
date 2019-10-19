@@ -1,7 +1,7 @@
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Module.Http;
 using Newtonsoft.Json.Linq;
 
-namespace BaseFramework.PL.Transformer.Http {
+namespace Micron.PL.Transformer.Http {
     public class HttpErrorTransformer : BaseTransformer {
         public override JObject Transform(object obj) {
             var error = (HttpError) obj;

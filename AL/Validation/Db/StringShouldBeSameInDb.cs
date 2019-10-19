@@ -1,11 +1,11 @@
 using System.Linq;
-using BaseFramework.DL.Module.Db;
-using BaseFramework.DL.Module.Http;
-using BaseFramework.DL.Module.Validator;
 using Dapper;
+using Micron.DL.Module.Db;
+using Micron.DL.Module.Http;
+using Micron.DL.Module.Validator;
 using Nancy;
 
-namespace BaseFramework.AL.Validation.Db {
+namespace Micron.AL.Validation.Db {
     public class StringShouldBeSameInDb : IValidatorRule {
         public string Parameter { get; }
 

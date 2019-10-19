@@ -1,6 +1,6 @@
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Module.Http;
 
-namespace BaseFramework.DL.Middleware {
+namespace Micron.DL.Middleware {
     public static class MiddlewareProcessor {
         public static HttpError Process(ProcessedRequest request, IMiddleware[] middleware) {
             foreach (var m in middleware) {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BaseFramework.AL.Config.CLI {
+namespace Micron.AL.Config.CLI {
     public abstract class BaseCommand {
         public abstract string Signature { get; }
         

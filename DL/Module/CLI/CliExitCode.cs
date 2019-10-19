@@ -1,4 +1,4 @@
-namespace BaseFramework.DL.Module.CLI {
+namespace Micron.DL.Module.CLI {
     public enum CliExitCode {
         Ok = 0,
         

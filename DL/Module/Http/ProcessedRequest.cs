@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Nancy;
 
-namespace BaseFramework.DL.Module.Http {
+namespace Micron.DL.Module.Http {
     public class ProcessedRequest {
         public Request Request { get; }
         public List<HttpError> Errors { get; }

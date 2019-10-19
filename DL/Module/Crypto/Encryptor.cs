@@ -2,10 +2,10 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using BaseFramework.DL.Module.Config;
+using Micron.DL.Module.Config;
 
 // Used example from: https://stackoverflow.com/questions/10168240/encrypting-decrypting-a-string-in-c-sharp
-namespace BaseFramework.DL.Module.Crypto {
+namespace Micron.DL.Module.Crypto {
     public static class Encryptor {
         public static string Encrypt(string text, string key = null) {
             if (text.Length == 0) {

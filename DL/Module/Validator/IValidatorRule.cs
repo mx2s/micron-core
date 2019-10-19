@@ -1,7 +1,7 @@
-using BaseFramework.DL.Module.Http;
+using Micron.DL.Module.Http;
 using Nancy;
 
-namespace BaseFramework.DL.Module.Validator {
+namespace Micron.DL.Module.Validator {
     public interface IValidatorRule {
         HttpError Process(Request request);
     }

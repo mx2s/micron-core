@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BaseFramework.DL.Module.Schedule {
+namespace Micron.DL.Module.Schedule {
     public class JobSchedule {
         public static JobSchedule instance;
 

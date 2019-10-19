@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using BaseFramework.DL.Module.Config;
 using JWT.Algorithms;
 using JWT.Builder;
+using Micron.DL.Module.Config;
 
-namespace BaseFramework.DL.Module.Auth {
+namespace Micron.DL.Module.Auth {
     public static class Jwt {
         public static string FromUserId(int userId) {
             var days = AppConfig.Get().GetJwtLifeDays();

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using BaseFramework.PL.Transformer.Http;
+using Micron.PL.Transformer.Http;
 using Nancy;
 using Newtonsoft.Json.Linq;
 
-namespace BaseFramework.DL.Module.Http {
+namespace Micron.DL.Module.Http {
     public static class HttpResponse {
         public static Response Data(JObject data, HttpStatusCode statusCode = HttpStatusCode.OK) {
             var response = (Response) new JObject() {

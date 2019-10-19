@@ -1,6 +1,6 @@
 using Nancy;
 
-namespace BaseFramework.DL.Module.Http {
+namespace Micron.DL.Module.Http {
     public class HttpError {
         public HttpStatusCode StatusCode { get; }
 
