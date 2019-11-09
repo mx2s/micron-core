@@ -4,15 +4,20 @@ using Npgsql;
 
 namespace Micron.DL.Module.Db {
     public class DbConnection {
-        private readonly IDbConnection _connection;
+        private IDbConnection _connection;
 
         private IDbTransaction _lastTransaction;
         
         private static DbConnection _instance;
 
         private DbConnection() {
-            _connection = new NpgsqlConnection(AppConfig.Get().GetConnectionString());
+            ReConnect();
+        }
+
+        public IDbConnection ReConnect() {
+            _connection = new NpgsqlConnection(AppConfig.Get().GetConnectionString()); 
             _connection.Open();
+            return _connection;
         }
 
         public static DbConnection Get() {
