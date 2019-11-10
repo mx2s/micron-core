@@ -23,11 +23,11 @@ namespace Micron.DL.Module.Controller {
             };
         }
 
-        protected string GetStringFromRequest(string parameter) => (string) Request.Query[parameter];
+        protected string GetRequestStr(string parameter) => (string) Request.Query[parameter];
         
-        protected int GetIntFromRequest(string parameter) => (int) Request.Query[parameter];
+        protected int GetRequestInt(string parameter) => (int) Request.Query[parameter];
         
-        protected Enum GetEnumFromRequest(string parameter, Type enumType) {
+        protected Enum GetRequestEnum(string parameter, Type enumType) {
             return (Enum) Enum.Parse(enumType, Request.Query[parameter], true);
         }
     }
