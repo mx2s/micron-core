@@ -9,7 +9,7 @@ namespace Micron.DL.Module.Db {
         private IDbTransaction _lastTransaction;
         
         private static DbConnection _instance;
-
+        
         private DbConnection() {
             ReConnect();
         }
@@ -37,6 +37,6 @@ namespace Micron.DL.Module.Db {
             Get()._lastTransaction.Rollback();
         }
 
-        public static IDbConnection Connection() => Get()._connection;
+        public static IDbConnection Connection() => new NpgsqlConnection(AppConfig.Get().GetConnectionString());
     }
 }

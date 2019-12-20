@@ -12,7 +12,7 @@ namespace Micron.AL.CLI.Basic {
         }
         
         public CliResult Execute() {
-            StrOutput.Add("Framework version: " + new AppInfo().GetAssemblyVersion());
+            StrOutput.Add("Micron core version: " + new AppInfo().GetAssemblyVersion());
             return new CliResult(CliExitCode.Ok, StrOutput);
         }
     }
