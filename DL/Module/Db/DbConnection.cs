@@ -29,7 +29,9 @@ namespace Micron.DL.Module.Db {
         }
 
         public static IDbTransaction BeginTransaction() {
-            Get()._lastTransaction = Connection().BeginTransaction();
+            var connection = Connection();
+            connection.Open();
+            Get()._lastTransaction = connection.BeginTransaction();
             return Get()._lastTransaction;
         }
         
