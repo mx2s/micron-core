@@ -28,8 +28,9 @@ namespace Micron.DL.Module.Db {
         }
 
         public static IDbTransaction BeginTransaction() {
-            Get()._lastTransaction = Get()._connection.BeginTransaction();
-            return Get()._lastTransaction;
+            var newTx = Get()._connection.BeginTransaction();
+            Get()._lastTransaction = newTx;
+            return newTx;
         }
         
         public static void RollbackTransaction() {
