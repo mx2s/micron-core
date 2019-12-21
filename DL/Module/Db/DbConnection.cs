@@ -24,14 +24,11 @@ namespace Micron.DL.Module.Db {
             if (_instance == null) {
                 return _instance = new DbConnection();
             }
-
             return _instance;
         }
 
         public static IDbTransaction BeginTransaction() {
-            var connection = Connection();
-            connection.Open();
-            Get()._lastTransaction = connection.BeginTransaction();
+            Get()._lastTransaction = Get()._connection.BeginTransaction();
             return Get()._lastTransaction;
         }
         
@@ -40,5 +37,7 @@ namespace Micron.DL.Module.Db {
         }
 
         public static IDbConnection Connection() => new NpgsqlConnection(AppConfig.Get().GetConnectionString());
+
+        public static IDbConnection RootConnection() => Get()._connection;
     }
 }
